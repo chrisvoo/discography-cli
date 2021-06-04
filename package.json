@@ -1,0 +1,52 @@
+{
+  "name": "discography-cli",
+  "version": "0.0.1",
+  "description": "CLI for discography module",
+  "bin": "dist/bin.js",
+  "scripts": {
+    "dev": "ts-node --files src/bin.tsx",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "run-s clean tsc",
+    "prepare": "npm run build",
+    "test": "jest --detectOpenHandles --runInBand --forceExit",
+    "eslint": "eslint src",
+    "eslint-fix": "eslint --fix src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisvoo/discography-cli.git"
+  },
+  "keywords": [
+    "discography",
+    "cli"
+  ],
+  "author": "Christian Castelli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisvoo/discography-cli/issues"
+  },
+  "homepage": "https://github.com/chrisvoo/discography-cli#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.0",
+    "@types/react": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.0.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "ink": "^3.0.8",
+    "react": "^17.0.2"
+  }
+}
