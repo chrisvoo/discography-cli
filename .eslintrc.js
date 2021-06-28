@@ -23,5 +23,21 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': 'off',
     'react/react-in-jsx-scope': 'off',
+    'import/prefer-default-export': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {}, // this loads <rootdir>/tsconfig.json to eslint
+    },
   },
 };
